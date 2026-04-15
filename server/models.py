@@ -21,7 +21,7 @@ class Exercise(db.Model):
             raise ValueError("Exercise name too short")
         return value
     
-    # Workout model
+    # Workout model 
 class Workout(db.Model):
     __tablename__ = 'workouts'
 
