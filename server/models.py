@@ -4,7 +4,7 @@ from datetime import date
 
 db = SQLAlchemy()
 
-    #Exercise model
+# ---------------- EXERCISE ----------------
 class Exercise(db.Model):
     __tablename__ = 'exercises'
 
@@ -20,8 +20,9 @@ class Exercise(db.Model):
         if len(value) < 3:
             raise ValueError("Exercise name too short")
         return value
-    
-    # Workout model 
+
+
+# ---------------- WORKOUT ----------------
 class Workout(db.Model):
     __tablename__ = 'workouts'
 
@@ -38,8 +39,8 @@ class Workout(db.Model):
             raise ValueError("Duration must be positive")
         return value
 
-    
-    # Workout  Exercise model
+
+# ---------------- WORKOUT EXERCISE ----------------
 class WorkoutExercise(db.Model):
     __tablename__ = 'workout_exercises'
 
